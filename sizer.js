@@ -23,9 +23,11 @@ function resizeOne(sizerElt) {
     var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
     if (sizerImgAspectRatio > sizerEltAspectRatio) {
+        sizerImg.style.width  = "auto"
         sizerImg.style.height = "100%"
     } else {
         sizerImg.style.width  = "100%"
+        sizerImg.style.height = "auto"
     }
 }
 
