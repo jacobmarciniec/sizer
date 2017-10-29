@@ -1,0 +1,9 @@
+.image {
+    position : relative;
+    overflow : hidden;
+}
+
+.image > img {
+    position : absolute;
+    width    : 100%;
+}
