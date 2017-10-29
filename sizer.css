@@ -1,9 +1,8 @@
-.image {
+.sizer {
     position : relative;
     overflow : hidden;
 }
 
-.image > img {
+.sizer > img {
     position : absolute;
-    width    : 100%;
 }

@@ -19,13 +19,14 @@ function resizeOne(sizerElt) {
 
     sizerElt.style.height = text.offsetHeight + "px";
 
-    // determine aspect ratio of image
-    // determine aspect ratio of container
+    var sizerImgAspectRatio = sizerImg.naturalWidth / sizerImg.naturalHeight;
+    var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
-    // if sizerImg.aspectRatio > sizerElt.aspectRatio
-    // sizerImg.style.height = "100%"
-    // else
-    // sizerImg.style.width = "100%"
+    if (sizerImgAspectRatio > sizerEltAspectRatio) {
+        sizerImg.style.height = "100%"
+    } else {
+        sizerImg.style.width  = "100%"
+    }
 }
 
 /**
@@ -33,7 +34,10 @@ function resizeOne(sizerElt) {
  * Feeds all sizer elements to the resizeOne function.
  */
 function resizeAll() {
-    document.getElementsByClassName("sizer").forEach(resizeOne);
+    var sizerElts = document.getElementsByClassName("sizer");
+    for (var i = 0; i < sizerElts.length; i++) {
+        resizeOne(sizerElts[i]);
+    }
 }
 
 // Add event listeners (as apposed to inline) as not to interfere with any existing code
