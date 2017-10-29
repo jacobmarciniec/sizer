@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sizer</title>
+        <link rel="stylesheet" href="../sizer.css">
+        <style>
+            body {
+                font-family : Sans-Serif;
+                background  : #151515;
+            }
+
+            .container {
+                max-width     : 800px;
+                margin-top    : 40px;
+                margin-right  : auto;
+                margin-bottom : 40px;
+                margin-left   : auto;
+                padding       : 10px;
+                overflow      : auto;
+                background    : #DDDDDD;
+            }
+
+            .col-half {
+                float : left;
+                width : 50%;
+            }
+
+            .col-fourth {
+                float : left;
+                width : 25%;
+            }
+
+            .col-threefourth {
+                float : left;
+                width : 75%;
+            }
+
+            .text {
+                padding-left  : 20px;
+                padding-right : 20px;
+                box-sizing    : border-box;
+            }
+
+            .text p {
+                text-align : justify;
+                color      : #555555;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-half sizer" data-sizer="text-1">
+                <img src="./photo_4-3.jpeg" alt="">
+            </div>
+
+            <div class="col-half text" id="text-1">
+                <h1>Do You Like Yogurt?</h1>
+                <p>Of course you do! Only silly aligators don't like yogurt! The bacteria used to make yogurt are known as "yogurt cultures". Fermentation of lactose by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.[1] Cow's milk is commonly available worldwide, and, as such, is the milk most commonly used to make yogurt. Milk from water buffalo, goats, ewes, mares, camels, and yaks is also used to produce yogurt where available locally. Milk used may be homogenized or not (milk distributed in many parts of the world is homogenized); both types may be used, with substantially different results.<br>
+                    SOURCE: <a href="https://en.wikipedia.org/wiki/Yogurt">https://en.wikipedia.org/wiki/Yogurt</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-threefourth text" id="text-2">
+                <h1>Do You Like Yogurt?</h1>
+                <p>Of course you do! Only silly aligators don't like yogurt! The bacteria used to make yogurt are known as "yogurt cultures". Fermentation of lactose by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.[1] Cow's milk is commonly available worldwide, and, as such, is the milk most commonly used to make yogurt. Milk from water buffalo, goats, ewes, mares, camels, and yaks is also used to produce yogurt where available locally. Milk used may be homogenized or not (milk distributed in many parts of the world is homogenized); both types may be used, with substantially different results.<br>
+                    SOURCE: <a href="https://en.wikipedia.org/wiki/Yogurt">https://en.wikipedia.org/wiki/Yogurt</a></p>
+            </div>
+
+            <div class="col-fourth sizer" data-sizer="text-2">
+                <img src="./photo_16-9.jpeg" alt="" style="right: -75%;">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-half sizer" data-sizer="text-3">
+                <img src="./photo_9-16.jpeg" alt="">
+            </div>
+
+            <div class="col-half text" id="text-3">
+                <h1>Do You Like Yogurt?</h1>
+                <p>Of course you do! Only silly aligators don't like yogurt! The bacteria used to make yogurt are known as "yogurt cultures". Fermentation of lactose by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.[1] Cow's milk is commonly available worldwide, and, as such, is the milk most commonly used to make yogurt. Milk from water buffalo, goats, ewes, mares, camels, and yaks is also used to produce yogurt where available locally. Milk used may be homogenized or not (milk distributed in many parts of the world is homogenized); both types may be used, with substantially different results. <br>
+                    SOURCE: <a href="https://en.wikipedia.org/wiki/Yogurt">https://en.wikipedia.org/wiki/Yogurt</a></p>
+            </div>
+        </div>
+
+        <script src="../sizer.js"></script>
+    </body>
+</html>
