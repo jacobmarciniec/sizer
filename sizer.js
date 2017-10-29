@@ -17,7 +17,7 @@ function resizeOne(sizerElt) {
     var textElt   = document.getElementById(textEltId);
     var sizerImg  = sizerElt.getElementsByTagName('img')[0];
 
-    sizerElt.style.height = text.offsetHeight + "px";
+    sizerElt.style.height = textElt.offsetHeight + "px";
 
     var sizerImgAspectRatio = sizerImg.naturalWidth / sizerImg.naturalHeight;
     var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
