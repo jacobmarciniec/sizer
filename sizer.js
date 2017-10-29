@@ -2,8 +2,8 @@
  * Sizer
  * =====
  * Copyright (c) foxyjacob
- * Github repository: (to be added)
- * License:           (to be added)
+ * Github repository: https://github.com/foxyjacob/sizer
+ * License:           MIT
  *
  * ========================================================================= */
 
