@@ -26,7 +26,6 @@ function resizeOne(sizerElt) {
 
     if (textElt) {
         sizerElt.style.height = textElt.offsetHeight + "px";
-        return true;
     } else {
         var ratio;
         try {
@@ -42,13 +41,26 @@ function resizeOne(sizerElt) {
     var imgEltAspectRatio = imgElt.naturalWidth / imgElt.naturalHeight;
     var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
-    // "cover" behavior
     if (imgEltAspectRatio > sizerEltAspectRatio) {
-        imgElt.style.width  = "auto";
-        imgElt.style.height = "100%";
+        if (imgElt.classList.contains("contain")) {
+            // "contain" behavior
+            imgElt.style.width  = "100%";
+            imgElt.style.height = "auto";
+        } else {
+            // "cover" behavior
+            imgElt.style.width  = "auto";
+            imgElt.style.height = "100%";
+        }
     } else {
-        imgElt.style.width  = "100%";
-        imgElt.style.height = "auto";
+        if (imgElt.classList.contains("contain")) {
+            // "contain" behavior
+            imgElt.style.width  = "auto";
+            imgElt.style.height = "100%";
+        } else {
+            // "cover" behavior
+            imgElt.style.width  = "100%";
+            imgElt.style.height = "auto";
+        }
     }
 }
 
