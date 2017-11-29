@@ -42,7 +42,7 @@ function resizeOne(sizerElt) {
     var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
     if (imgEltAspectRatio > sizerEltAspectRatio) {
-        if (imgElt.classList.contains("contain")) {
+        if (sizerElt.classList.contains("contain")) {
             // "contain" behavior
             imgElt.style.width  = "100%";
             imgElt.style.height = "auto";
@@ -52,7 +52,7 @@ function resizeOne(sizerElt) {
             imgElt.style.height = "100%";
         }
     } else {
-        if (imgElt.classList.contains("contain")) {
+        if (sizerElt.classList.contains("contain")) {
             // "contain" behavior
             imgElt.style.width  = "auto";
             imgElt.style.height = "100%";
