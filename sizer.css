@@ -7,12 +7,12 @@
  *
  * ========================================================================= */
 
-.sizer {
+[data-sizer] {
     position : relative;
     overflow : hidden;
     width    : 100%;
 }
 
-.sizer > img {
+[data-sizer] > img {
     position : absolute;
 }
