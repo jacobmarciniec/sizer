@@ -57,7 +57,7 @@ var optimizedResize = (function() {
 }());
 
 
-var Sizer = {
+var sizer = {
     /**
     * @method resizeOne
     * Resizes a sizer container and makes sure the image has the correct CSS properties so that it covers the sizer container.
@@ -84,7 +84,7 @@ var Sizer = {
                 ratio = (ratio[1] / ratio[0]);
                 sizerElt.style.height = (sizerElt.offsetWidth * ratio) + "px";
             } catch (e) {
-                console.error("Sizer failed to understand what you want.");
+                console.error("sizer failed to understand what you want.");
                 return false;
             }
         }
@@ -122,11 +122,11 @@ var Sizer = {
     resizeAll : function() {
         var sizerElts = document.querySelectorAll("[data-sizer]");
         for (var i = 0; i < sizerElts.length; i++) {
-            Sizer.resizeOne(sizerElts[i]);
+            sizer.resizeOne(sizerElts[i]);
         }
     }
 };
 
 
-window.addEventListener("load", Sizer.resizeAll);
-optimizedResize.add(Sizer.resizeAll);
+window.addEventListener("load", sizer.resizeAll);
+optimizedResize.add(sizer.resizeAll);
