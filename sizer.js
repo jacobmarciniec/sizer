@@ -93,7 +93,7 @@ var Sizer = {
         var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
         if (imgEltAspectRatio > sizerEltAspectRatio) {
-            if (sizerElt.classList.contains("contain")) {
+            if (sizerElt.hasAttribute("data-sizer-contain")) {
                 // "contain" behavior
                 imgElt.style.width  = "100%";
                 imgElt.style.height = "auto";
@@ -103,7 +103,7 @@ var Sizer = {
                 imgElt.style.height = "100%";
             }
         } else {
-            if (sizerElt.classList.contains("contain")) {
+            if (sizerElt.hasAttribute("data-sizer-contain")) {
                 // "contain" behavior
                 imgElt.style.width  = "auto";
                 imgElt.style.height = "100%";
