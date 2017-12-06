@@ -93,25 +93,7 @@ var sizer = {
         var sizerEltAspectRatio = sizerElt.offsetWidth  / sizerElt.offsetHeight;
 
         if (imgEltAspectRatio > sizerEltAspectRatio) {
-            if (sizerElt.hasAttribute("data-sizer-contain")) {
-                // "contain" behavior
-                imgElt.style.width  = "100%";
-                imgElt.style.height = "auto";
-            } else {
-                // "cover" behavior
-                imgElt.style.width  = "auto";
-                imgElt.style.height = "100%";
-            }
-        } else {
-            if (sizerElt.hasAttribute("data-sizer-contain")) {
-                // "contain" behavior
-                imgElt.style.width  = "auto";
-                imgElt.style.height = "100%";
-            } else {
-                // "cover" behavior
-                imgElt.style.width  = "100%";
-                imgElt.style.height = "auto";
-            }
+            sizerElt.classList.add("sizer-IARgtSAR");
         }
     },
 

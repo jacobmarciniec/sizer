@@ -13,10 +13,42 @@
     width    : 100%;
 }
 
+
+/* 1. center image in sizer element
+ * 2. "cover" behavior
+ * 3. "contain" behavior
+ * ------------------------------------------------------------------------- */
 [data-sizer] > img {
     position  : absolute;
-    top       : 50%;
-    left      : 50%;
-    transform : translate(-50%, -50%);
+    top       : 50%; /* 1 */
+    left      : 50%; /* 1 */
+    transform : translate(-50%, -50%); /* 1 */
     max-width : none;
+    width     : 100%; /* 2 "cover" */
+    height    : auto; /* 2 "cover" */
+}
+
+[data-sizer][data-sizer-contain] > img {
+    width     : auto; /* 3 "contain" */
+    height    : 100%; /* 3 "contain" */
+}
+
+[data-sizer].sizer-IARgtSAR > img {
+    width  : auto; /* 2 "cover" */
+    height : 100%; /* 2 "cover" */
+}
+
+[data-sizer][data-sizer-contain].sizer-IARgtSAR > img {
+    width  : 100%; /* 3 "contain" */
+    height : auto; /* 3 "contain" */
+}
+
+
+/* 1. 16:9 aspect ratio
+ * ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    [data-sizer] {
+        height         :  0;
+        padding-bottom : 56.25%; /* 1 */
+    }
 }
