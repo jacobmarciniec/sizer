@@ -52,3 +52,26 @@
         padding-bottom : 56.25%; /* 1 */
     }
 }
+
+
+/* Default to 16:9 ratio and over-ride positioning in case of columns changing
+ * into rows on low-resolution displays (otherwise images sized according to
+ * other elements may become excessively large for no reason, and/or be
+ * positioned partly or completely out of view).
+ *
+ * Change this breakpoint to match the one your layout uses.
+ * ------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    [data-sizer] {
+        height      :  0  !important;
+        padding-top : 56.25% !important;
+    }
+
+    [data-sizer] > img {
+        position  : absolute;
+        top       : 50% !important;
+        left      : 50% !important;
+        transform : translate(-50%, -50%) !important;
+        max-width : none;
+    }
+}
